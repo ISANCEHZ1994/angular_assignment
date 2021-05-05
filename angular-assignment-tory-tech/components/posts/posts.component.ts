@@ -10,13 +10,13 @@ export class PostsComponent implements OnInit {
 
   // posts = ['a post here', 'another post right over here', 'and post here!']
 
-  posts;
+  posts: any;
 
   constructor( private postService: PostsService ) { 
 
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.posts = this.postService.getPosts();
   }
 

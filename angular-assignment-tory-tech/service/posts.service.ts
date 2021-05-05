@@ -18,7 +18,7 @@ export class PostsService {
 
   public getPosts() {
       console.log('we are getting this information!')
-      return this.http.get<Post[]>(`${this.postsURL}`);
+      return this.http.get(this.postsURL);
 
   }
   
