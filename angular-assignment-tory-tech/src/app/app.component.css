@@ -1,0 +1,8 @@
+p {
+    padding-right: 5em;
+    padding-left: 5em;
+}
+/* Add the following: */
+app-posts {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+}
