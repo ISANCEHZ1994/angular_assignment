@@ -1,0 +1,16 @@
+<div>
+    <h2> Here are our Posts: </h2>
+        <ul>
+            <li *ngFor="let post of posts"> {{post.title}} </li>
+        </ul>
+  </div>
+  
+  <div class="card" style="width: 18rem;" *ngFor="let post of posts">
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      <p class="card-text">{{posts.body}}</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>

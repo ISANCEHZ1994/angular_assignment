@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiPosts: 'https://jsonplaceholder.typicode.com/posts',
-  apiComments: 'https://jsonplaceholder.typicode.com/posts/1/comments'
+  // apiComments: 'https://jsonplaceholder.typicode.com/posts/1/comments'
 };
 
 /*
