@@ -1,12 +1,25 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-<!-- Toolbar -->
+
 <div class="container">
-  <h1> Hello World! </h1>
-  <app-posts>
-    <!-- <app-comments></app-comments> -->
+  <h1> Hello World! (this is in app html) </h1>
+
+  <app-posts [(ngModel)] = 'postSelected'>
+
   </app-posts>
-  <!-- <app-comments></app-comments> -->
+  
 </div>
 
 <router-outlet></router-outlet>
+
+  <!-- <div class="post-container" *ngFor='let post of posts' > 
+
+    <h1> {{post.title}} </h1>
+    <h3> {{ post.body }} </h3>
+   
+    <button type="button" label="click" (click)="toggleChild()" > comments </button>
+    <app-comments [(ngModel)] ='selectedPost'  [showMe]='show' ></app-comments> 
+
+  </div> -->
+ 
+

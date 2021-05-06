@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsService } from 'service/posts.service';
+import { PostsService } from 'src/service/posts.service';
 
 @Component({
   selector: 'app-posts',
@@ -12,12 +12,15 @@ export class PostsComponent implements OnInit {
 
   // public name = 'this is the post ID';
 
+  // public buttonClick: void;
+
+  public selectedPost: number;
+
   public show: boolean = false;
 
   posts: any;
   
   constructor( private postService: PostsService ) { 
-
   }
 
   ngOnInit() {
@@ -26,6 +29,10 @@ export class PostsComponent implements OnInit {
 
   public toggleChild(){
     this.show = !this.show;
+    console.log('we are clicking this button')
   }
+
+
+
 
 }

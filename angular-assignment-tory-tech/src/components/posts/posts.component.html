@@ -1,0 +1,19 @@
+<div>
+      
+        <h1> Here are all the Posts: </h1>
+
+        <div class="card" style="width: 18rem; text-align: center;" *ngFor='let post of posts | async' >
+            <h3 class="card-title">
+              {{ post.title }}
+            </h3>
+            <div>
+              {{ post.id }}
+            </div>
+            <p class="card-text" >{{post.body}}</p>
+            <button class="btn btn-primary" type="button" label="click" (click)="toggleChild()" click="clickForId($post.id)" > comments</button>
+            <app-comments [id] = 'post.id' [showComment]='selectedPost' [showMe]='show' > </app-comments> 
+      
+            <br>
+        </div>
+    
+  </div>

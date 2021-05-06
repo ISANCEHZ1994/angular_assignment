@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CommentsService } from 'service/comments.service';
+import { CommentsService } from 'src/service/comments.service';
 
 @Component({
   selector: 'app-comments',
@@ -8,19 +8,21 @@ import { CommentsService } from 'service/comments.service';
 })
 export class CommentsComponent implements OnInit {
 
-  @Input() public parentData; 
-  // @Input(''parentData') public: name // now check comments.html - use 'name' to reference the parentData that is pass thru
+  // @Input() public parentData; 
+  // @Input(''parentData') public: name // now check comments.html 
+  // use 'name' to reference the parentData that is pass thru
+
   @Input() showMe: boolean;
 
-  // @Input() userId: [];
+  @Input() showComment: number;
+
   comments: any;
 
-  // public userId: number;
+  
 
   constructor( private commentService: CommentsService ) { }
 
   ngOnInit(): void {
-    // this.userId = this.userId;
     this.comments = this.commentService.getComments();
   }
   
