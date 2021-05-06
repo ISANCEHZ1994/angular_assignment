@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+// import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 // import { Post } from 'interface/post'
 
@@ -18,7 +18,7 @@ export class PostsService {
 
   };
 
-  public getPosts(): Observable<any> {
+  public getPosts() {
       console.log('we are getting posts!')
       return this.http.get(this.postsURL);
 

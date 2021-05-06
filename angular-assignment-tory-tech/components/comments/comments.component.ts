@@ -12,7 +12,7 @@ export class CommentsComponent implements OnInit {
   // @Input(''parentData') public: name // now check comments.html - use 'name' to reference the parentData that is pass thru
   @Input() showMe: boolean;
 
-  @Input() userId: [];
+  // @Input() userId: [];
   comments: any;
 
   // public userId: number;
@@ -20,7 +20,7 @@ export class CommentsComponent implements OnInit {
   constructor( private commentService: CommentsService ) { }
 
   ngOnInit(): void {
-    this.userId = this.userId;
+    // this.userId = this.userId;
     this.comments = this.commentService.getComments();
   }
   

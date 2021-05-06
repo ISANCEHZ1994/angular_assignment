@@ -5,8 +5,6 @@
 
 <div *ngIf="showMe">
 
-    <!-- <h1> this part will be toggled by the parent component button </h1> -->
-
     <div class="commentContainer" *ngFor='let comment of comments | async'>
         <p>name: {{ comment.name }}</p>
         <p>email: {{ comment.email }}</p>

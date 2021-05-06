@@ -11,19 +11,17 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-
   // title = 'angular-assignment-tory-tech';
-  public posts: Post[];
 
-  public listComments: Comment[];
+  public posts: Post[]; 
+
+  // public listComments: Comment[]; <--- i think I can use this to get the comments id (post_id)
 
   constructor(private postsService: PostsService){
     
   };
 
   ngOnInit(){
-    // return this.postsService.getPosts()
-    // .subscribe(data => this.posts = data);
     this.getPosts();
   };
 

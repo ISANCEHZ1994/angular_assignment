@@ -8,19 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class CommentsService {
 
-  private commentsURL = environment.api
-
-  public userId: number;
-
-  listComments: Comment[];
+  private commentsURL = environment.apiComments
 
   constructor(private http: HttpClient) { }
 
-  public getComments(): Observable<any>{
-
-    // this.userId = this.http.get(this.commentsURL).map( post => post.id)
-
-    // let params1 = new HttpParams().set('userId', '1')
+  public getComments(){
 
       console.log('we are getting comments!')
       return this.http.get(`${this.commentsURL}`); // ?userId=${this.userId}/comments
