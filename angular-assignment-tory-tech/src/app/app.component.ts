@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostsService } from 'service/posts.service';
 import { Post } from 'interface/post'
+import { Comment } from 'interface/comment'
 import { HttpErrorResponse } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 
@@ -13,6 +14,8 @@ export class AppComponent implements OnInit{
 
   // title = 'angular-assignment-tory-tech';
   public posts: Post[];
+
+  public listComments: Comment[];
 
   constructor(private postsService: PostsService){
     

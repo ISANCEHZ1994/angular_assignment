@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-// import { Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Post } from 'interface/post'
+// import { Post } from 'interface/post'
 
 @Injectable({
   providedIn: 'root'
@@ -10,17 +10,23 @@ import { Post } from 'interface/post'
 export class PostsService {
 
     // private postsURL = 'https://jsonplaceholder.typicode.com/posts'
-    private postsURL = environment.apiPosts
+    private postsURL = environment.api
+    
+    
 
   constructor(private http: HttpClient) { 
 
   };
 
-  public getPosts() {
-      console.log('we are getting this information!')
+  public getPosts(): Observable<any> {
+      console.log('we are getting posts!')
       return this.http.get(this.postsURL);
 
   }
+
+  // public findPostId(){
+  //   let id = this.http.get(this.postsURL).map()
+  // }
   
 
 

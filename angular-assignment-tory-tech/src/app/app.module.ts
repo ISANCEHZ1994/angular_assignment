@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponent } from '../../components/posts/posts.component';
 import { PostsService } from 'service/posts.service';
+import { CommentsComponent } from '../../components/comments/comments.component';
 
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService } from './in-memory-data.service';
@@ -13,7 +14,8 @@ import { PostsService } from 'service/posts.service';
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

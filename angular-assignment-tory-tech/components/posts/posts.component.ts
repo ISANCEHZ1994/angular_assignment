@@ -10,14 +10,22 @@ export class PostsComponent implements OnInit {
 
   // posts = ['a post here', 'another post right over here', 'and post here!']
 
-  posts: any;
+  // public name = 'this is the post ID';
 
+  public show: boolean = false;
+
+  posts: any;
+  
   constructor( private postService: PostsService ) { 
 
   }
 
   ngOnInit() {
     this.posts = this.postService.getPosts();
+  }
+
+  public toggleChild(){
+    this.show = !this.show;
   }
 
 }

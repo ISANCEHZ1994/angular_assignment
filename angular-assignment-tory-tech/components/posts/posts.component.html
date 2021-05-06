@@ -1,22 +1,17 @@
 <div>
-  <!-- <div class="card" style="width: 18rem;" *ngFor="let post of posts | async">
-    <div class="card-body">
-      <h5 class="card-title">{{post.title}}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">{{posts.body}}</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div> -->
-
-      <div >
+      
         <h1> Here are all the Posts: </h1>
-        <div class="card" style="width: 18rem;" *ngFor='let post of posts | async' style="text-align: center;"> <!-- here it wasnt showing because async was not there! -->
+        <div class="card" style="width: 18rem; text-align: center;" *ngFor='let post of posts | async'> <!-- here it wasnt showing because async was not there! -->
+          
           <h3 class="card-title">
             {{ post.title }}
           </h3>
           <p class="card-text" >{{post.body}}</p>
-          <button > comments</button>
+          <button class="btn btn-primary" type="button" label="click" (click)="toggleChild()" > comments</button>
+          <app-comments  [showMe]='show' > </app-comments> <!-- [userId] = '{{ post.id }}'  -->
+          <!-- <app-comments [parentData] = 'name'> </app-comments> -->
+          <br>
+        
         </div>
-      </div>
-
+    
   </div>
