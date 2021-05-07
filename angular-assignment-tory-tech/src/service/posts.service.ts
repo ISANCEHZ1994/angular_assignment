@@ -4,6 +4,14 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 // import { Post } from 'interface/post'
 
+
+/**
+ * 
+ * NOTE: created api.service to do both the work of posts.service and comments.service!
+ * 
+ */
+
+
 @Injectable({
   providedIn: 'root'
 })

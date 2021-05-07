@@ -9,12 +9,12 @@ import { environment } from 'src/environments/environment';
 })
 export class ApiService {
  
-  private URL = environment.api
+  private URL = environment.api // <= this is https://jsonplaceholder.typicode.com/posts
 
-  public id: number;
+  public id: number; // wanted to make a reference to the id already how ever I dont know if I can even get 
+  // information from here.
 
   constructor( private http: HttpClient) { }
-
 
   public getPosts(): Observable<any>{
     console.log('we are getting posts!')
@@ -22,10 +22,6 @@ export class ApiService {
   }
 
   public getComments(){
-    
-    // let params = new HttpParams().set('userId', id)
-    // let commentId = `https://jsonplaceholder.typicode.com/posts/${this.id}/comments`
-
       console.log('we are getting comments!')
       return this.http.get(`${this.URL}?postId=${this.id}`); // ?userId=${this.userId}/comments
   }

@@ -4,6 +4,13 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Comment } from '../interface/comment' 
 import { Observable } from 'rxjs';
 
+
+/**
+ * 
+ * NOTE: created api.service to do both the work of comments.service and posts.service!
+ * 
+ */
+
 @Injectable({
   providedIn: 'root'
 })

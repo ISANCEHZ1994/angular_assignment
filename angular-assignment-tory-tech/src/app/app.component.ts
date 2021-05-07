@@ -15,7 +15,7 @@ import { ApiService } from 'src/service/api.service';
 export class AppComponent implements OnInit{
 
   public posts: Post[]; 
-  postSelected: number;
+  postSelected: number; // wanted to get the specifc id here and see if I can pass it to where I needed it
 
   public comments:  Comment[];
   
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit{
 
   public getPosts(): void{
     this.apiService.getPosts().subscribe(
-      ( response: Post[]) => {
+      ( response: Post[]) => { // want a pop-up to show if function is not working
         this.posts = response;
       },
       ( error: HttpErrorResponse ) => {
