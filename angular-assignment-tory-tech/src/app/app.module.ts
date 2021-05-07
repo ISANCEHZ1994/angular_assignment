@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { PostsComponent } from '../components/posts/posts.component';
 import { PostsService } from 'src/service/posts.service';
 import { CommentsComponent } from '../components/comments/comments.component';
+import { ApiService } from 'src/service/api.service';
 
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService } from './in-memory-data.service';
@@ -25,7 +26,8 @@ import { CommentsComponent } from '../components/comments/comments.component';
     HttpClientModule
   ],
   providers: [
-    PostsService
+    PostsService,
+    ApiService
   ],
   bootstrap: [AppComponent]
 

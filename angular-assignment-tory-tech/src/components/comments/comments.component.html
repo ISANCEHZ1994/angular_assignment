@@ -4,10 +4,11 @@
 
 
 <div *ngIf="showMe">
-
-    <div class="commentContainer" *ngFor='let comment of comments | async'>
-        <p>name: {{ comment.name }}</p>
-        <p>email: {{ comment.email }}</p>
-        <p>body: {{ comment.body }}</p>
+    <div>
+        <div class="commentContainer" *ngFor='let comment of comments | async'>
+            <p>name: {{ comment.name }}</p>
+            <p>email: {{ comment.email }}</p>
+            <p>body: {{ comment.body }}</p>
+        </div>
     </div>
 </div>

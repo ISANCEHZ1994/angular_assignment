@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsService } from 'src/service/posts.service';
+// import { PostsService } from 'src/service/posts.service';
+// import { CommentsService } from 'src/service/comments.service'
 import { Post } from 'src/interface/post'
-import { CommentsService } from 'src/service/comments.service'
 import { Comment } from 'src/interface/comment'
 import { HttpErrorResponse } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { ApiService } from 'src/service/api.service';
 
 @Component({
   selector: 'app-root',
@@ -16,17 +15,14 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit{
 
   public posts: Post[]; 
-  public comments: Comment[];
-
   postSelected: number;
 
-  // comments: Observable<any>;
-
+  public comments:  Comment[];
+  
   public show: boolean = false;
-
   public id: number;
 
-  constructor(private postsService: PostsService, private commentsService: CommentsService){
+  constructor(private apiService: ApiService){
     
   };
 
@@ -36,7 +32,7 @@ export class AppComponent implements OnInit{
   };
 
   public getPosts(): void{
-    this.postsService.getPosts().subscribe(
+    this.apiService.getPosts().subscribe(
       ( response: Post[]) => {
         this.posts = response;
       },
@@ -47,7 +43,7 @@ export class AppComponent implements OnInit{
   };
 
   public getComments(){
-    this.commentsService.getComments().subscribe(
+    this.apiService.getComments().subscribe(
       ( response: Comment[]) => {
         this.comments = response;
       },
@@ -61,10 +57,10 @@ export class AppComponent implements OnInit{
     this.show = !this.show;
   }
 
-  public clickForId(id:number){
-    this.id = id;
-    console.log(id)
-  }
+  // public clickForId(id:number){
+  //   this.id = id;
+  //   console.log(id)
+  // }
 
 }
 

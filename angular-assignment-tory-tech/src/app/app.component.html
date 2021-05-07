@@ -4,15 +4,11 @@
 <div class="container">
   <h1> Hello World! (this is in app html) </h1>
 
-  <app-posts [(ngModel)] = 'postSelected'>
-
+  <app-posts>  
+   
   </app-posts>
-  
-</div>
 
-<router-outlet></router-outlet>
-
-  <!-- <div class="post-container" *ngFor='let post of posts' > 
+  <!-- <div class="post-container" *ngFor='let post of posts | async' > 
 
     <h1> {{post.title}} </h1>
     <h3> {{ post.body }} </h3>
@@ -21,5 +17,11 @@
     <app-comments [(ngModel)] ='selectedPost'  [showMe]='show' ></app-comments> 
 
   </div> -->
+
+</div>
+
+<router-outlet></router-outlet>
+
+  
  
 

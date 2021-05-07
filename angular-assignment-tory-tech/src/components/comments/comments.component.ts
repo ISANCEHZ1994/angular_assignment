@@ -18,8 +18,6 @@ export class CommentsComponent implements OnInit {
 
   comments: any;
 
-  
-
   constructor( private commentService: CommentsService ) { }
 
   ngOnInit(): void {

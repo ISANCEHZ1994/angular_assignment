@@ -7,6 +7,11 @@ app-posts {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
 }
 
+/* .container{
+    border-style: solid;
+    border-color: brown;
+    border-width: 5px;
+} */
 
 .post-container{
     border-style: solid;

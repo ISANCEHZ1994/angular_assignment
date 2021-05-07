@@ -1,22 +1,25 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Comment } from '../interface/comment' 
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
-
-export class CommentsService {
-
-  private commentsURL = environment.apiComments
+export class ApiService {
+ 
+  private URL = environment.api
 
   public id: number;
 
-  constructor(private http: HttpClient) {
-    
-   }
+  constructor( private http: HttpClient) { }
+
+
+  public getPosts(): Observable<any>{
+    console.log('we are getting posts!')
+    return this.http.get(this.URL)
+  }
 
   public getComments(){
     
@@ -24,7 +27,9 @@ export class CommentsService {
     // let commentId = `https://jsonplaceholder.typicode.com/posts/${this.id}/comments`
 
       console.log('we are getting comments!')
-      return this.http.get(`${this.commentsURL}?postId=${this.id}`); // ?userId=${this.userId}/comments
+      return this.http.get(`${this.URL}?postId=${this.id}`); // ?userId=${this.userId}/comments
   }
+
+
 
 }
